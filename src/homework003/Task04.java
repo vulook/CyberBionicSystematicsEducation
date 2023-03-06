@@ -18,12 +18,12 @@ public class Task04 {
 //  ------ Volume of Cylinder = PI X Radius X Radius X Height -------
 
         v = Math.PI * r * r * h;
-        System.out.println("Volume of Cylinder = " + String.format("%.2f", v));
+        System.out.println("Volume of Cylinder = " + String.format("%.2f.", v));
 
 //  ------- Total surface area of Cylinder = 2 X PI X Radius X (Radius + Height) -------
 
         s = 2 * Math.PI * r * (r + h);
-        System.out.println("Surface Area of Cylinder = " + String.format("%.2f", s));
+        System.out.println("Surface Area of Cylinder = " + String.format("%.2f.", s));
 
     }
 

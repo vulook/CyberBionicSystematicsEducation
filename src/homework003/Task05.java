@@ -8,14 +8,17 @@ package homework003;
  */
 
 public class Task05 {
-
-//    String uberflu? = "uberflu?";
-    String  _Identifier = " _Identifier";
-//    String \u006fIdentifier = "\u006fIdentifier";
-//    String &myVar = "&myVar";
-    String myVariab1le = "myVariab1le";
-
     public static void main(String[] args) {
+
+        //String uberflu? = "uberflu?";
+        String  _Identifier = " _Identifier";
+        //String \u006fIdentifier = "\u006fIdentifier";
+        //String &myVar = "&myVar";
+        String myVariab1le = "myVariab1le";
+
+
+        System.out.println(_Identifier);
+        System.out.println(myVariab1le);
 
     }
 
