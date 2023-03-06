@@ -1,7 +1,6 @@
 package homework017;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,8 +12,8 @@ import java.util.List;
  */
 
 class Teacher {
-    private String name;
-    private int rating;
+    private final String name;
+    private final int rating;
 
     public String getName() {
         return name;
@@ -55,7 +54,7 @@ public class Task06 {
         teachers.add(new Teacher("Наталія Адамівна", 45));
         teachers.add(new Teacher("Валентина Тарасівна", 50));
 
-        Collections.sort(teachers, new TeacherComparator());
+        teachers.sort(new TeacherComparator());
         printList(teachers);
 
         System.out.println("The best teacher: " + teachers.get(teachers.size() - 1));
