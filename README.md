@@ -1,6 +1,6 @@
 # CyberBionic Systematics Education
 
-Java Developer:
+#Java Developer:
 
 
  • Java Starter;
@@ -13,5 +13,5 @@ Java Developer:
  
  • JDBC & Hibernate;
  
- • Spring;
+ • Spring.
  
