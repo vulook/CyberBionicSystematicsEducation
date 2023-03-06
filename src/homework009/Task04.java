@@ -38,11 +38,13 @@ public class Task04 {
             // integer element in the range [ -10; +10](10 inclusive)
             arrayInt[i] = (int) (Math.random() * (20) + 1) - 10; //
         }
+
         return arrayInt;
     }
 
     static int[] changeArrayLength(int[] arrayInt) {
         int length = arrayInt.length;
+
         return Arrays.copyOf(arrayInt, length + 1);
     }
 
@@ -51,6 +53,7 @@ public class Task04 {
         int[] arrayNew = new int[length + 1];
         arrayNew[0] = value;
         System.arraycopy(array, 0, arrayNew, 1, length);
+
         return arrayNew;
     }
 

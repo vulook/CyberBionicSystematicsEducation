@@ -52,6 +52,7 @@ public class Task02 {
             }
         }
         System.out.print("\n");
+
         return arrayInt;
     }
 
@@ -65,6 +66,7 @@ public class Task02 {
                 if (min > j) min = j;
             }
         }
+
         return min;
     }
 
@@ -78,6 +80,7 @@ public class Task02 {
                 if (max < j) max = j;
             }
         }
+
         return max;
     }
 
@@ -90,6 +93,7 @@ public class Task02 {
                 sum += j;
             }
         }
+
         return sum;
     }
 

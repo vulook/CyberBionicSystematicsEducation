@@ -35,6 +35,7 @@ public class Task06 {
                 array[i][j] = rand.nextInt((450) + 1) + 100;
             }
         }
+
         return array;
     }
 
@@ -51,6 +52,7 @@ public class Task06 {
                 array3[i][j] = arr1 + arr2;
             }
         }
+
         return array3;
     }
 

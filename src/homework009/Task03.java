@@ -44,6 +44,7 @@ public class Task03 {
         for (int i = 0; i < arrayInt.length; i++) {
             arrayInt[i] = random.nextInt(length * 10);
         }
+
         return arrayInt;
     }
 
@@ -54,6 +55,7 @@ public class Task03 {
         for (int j = 0; j < arrayInt.length; j++) {
             arrayReverse[j] = arrayInt[length - j - 1];
         }
+
         return arrayReverse;
     }
 
@@ -67,6 +69,7 @@ public class Task03 {
                 arrayNew[i] = 1;
             }
         }
+
         return arrayNew;
     }
 
