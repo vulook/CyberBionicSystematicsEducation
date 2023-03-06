@@ -33,16 +33,16 @@ public class Task04 {
         double max = arr[0];
         double average = 0;
 
-        for (int i = 0; i < length; i++) {
+        for (double v : arr) {
 
-            average += arr[i] / length;
+            average += v / length;
 
-            if (arr[i] < min) {
-                min = arr[i];
+            if (v < min) {
+                min = v;
             }
 
-            if (arr[i] > max) {
-                max = arr[i];
+            if (v > max) {
+                max = v;
             }
         }
 
