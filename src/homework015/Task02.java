@@ -1,127 +1,205 @@
 package homework015;
 
 /**
- * FileName: Task02
+ * FileName: Task01
  * Author:   Andriy Vulook
- * Date:     06.03.2023 10:59
- * Description: Plane, Саг та Ship extends Vehicle
+ * Date:     05.03.2023 01:51
+ * Description: ClassRoom and Pupil
  */
 
-
-class Vehicle {
-    private double x;
-    private double y;
-    private double cost;
-    private double speed;
-    private int year;
-
-
-    public double getX() {
-        return x;
+class Pupil {
+    public void study() {
+        System.out.println("Pupil studies.");
     }
 
-    public double getY() {
-        return y;
+    public void read() {
+        System.out.println("Pupil reads.");
     }
 
-    public double getCost() {
-        return cost;
+    public void write() {
+        System.out.println("Pupil writes.");
     }
 
-    public double getSpeed() {
-        return speed;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public Vehicle(double x, double y, double cost, double speed, int year) {
-        this.x = x;
-        this.y = y;
-        this.cost = cost;
-        this.speed = speed;
-        this.year = year;
+    public void relax() {
+        System.out.println("Pupil relaxes.");
     }
 }
 
-    class Plane extends Vehicle {
-        private double height;
-        private int passengers;
-
-
-        public double getHeight() {
-            return height;
-        }
-
-        public int getPassengers() {
-            return passengers;
-        }
-
-        public Plane(double x, double y, double cost, double speed, int year, double height, int passengers) {
-            super(x, y, cost, speed, year);
-            this.height = height;
-            this.passengers = passengers;
-        }
+class ExcellentPupil extends Pupil {
+    @Override
+    public void study() {
+        System.out.println("Excellent Pupil studies very well.");
     }
 
-    class Ship extends Vehicle {
-        private int passengers;
-        private String port;
-
-
-        public int getPassengers() {
-            return passengers;
-        }
-
-        public String getPort() {
-            return port;
-        }
-
-        public Ship(double x, double y, double cost, double speed, int year, int passengers, String port) {
-            super(x, y, cost, speed, year);
-            this.passengers = passengers;
-            this.port = port;
-        }
+    @Override
+    public void read() {
+        System.out.println("Excellent Pupil reads very well.");
     }
 
-    class Car extends Vehicle {
+    @Override
+    public void write() {
+        System.out.println("Excellent Pupil writes very well.");
+    }
 
-        public Car(double x, double y, double cost, double speed, int year) {
-            super(x, y, cost, speed, year);
-        }
+    @Override
+    public void relax() {
+        System.out.println("Excellent Pupil relaxes very rarely.");
+    }
+}
+
+class GoodPupil extends Pupil {
+    @Override
+    public void study() {
+        System.out.println("Good Pupil studies well.");
+    }
+
+    @Override
+    public void read() {
+        System.out.println("Good Pupil reads well.");
+    }
+
+    @Override
+    public void write() {
+        System.out.println("Good Pupil writes well.");
+    }
+
+    @Override
+    public void relax() {
+        System.out.println("Good Pupil relaxes sometimes.");
+    }
+}
+
+
+class BadPupil extends Pupil {
+    @Override
+    public void study() {
+        System.out.println("Bad Pupil hardly studies.");
+    }
+
+    @Override
+    public void read() {
+        System.out.println("Bad Pupil hardly reads.");
+    }
+
+    @Override
+    public void write() {
+        System.out.println("Bad Pupil hardly writes.");
+    }
+
+    @Override
+    public void relax() {
+        System.out.println("Bad Pupil relaxes too much.");
+    }
+
+}
+
+class ClassRoom {
+    protected Pupil pup1;
+    protected Pupil pup2;
+    protected Pupil pup3;
+    protected Pupil pup4;
+
+    public ClassRoom(Pupil pup1, Pupil pup2) {
+        this.pup1 = pup1;
+        this.pup2 = pup2;
+        this.pup3 = new Pupil();
+        this.pup4 = new Pupil();
+    }
+
+    public ClassRoom(Pupil pup1, Pupil pup2, Pupil pup3) {
+        this.pup1 = pup1;
+        this.pup2 = pup2;
+        this.pup3 = pup3;
+        this.pup4 = new Pupil();
+    }
+
+    public ClassRoom(Pupil pup1, Pupil pup2, Pupil pup3, Pupil pup4) {
+        this.pup1 = pup1;
+        this.pup2 = pup2;
+        this.pup3 = pup3;
+        this.pup4 = pup4;
+    }
+
+    public void study() {
+        System.out.print("1. ");
+        pup1.study();
+        System.out.print("2. ");
+        pup2.study();
+        System.out.print("3. ");
+        pup3.study();
+        System.out.print("4. ");
+        pup4.study();
+    }
+
+    public void read() {
+        System.out.print("1. ");
+        pup1.read();
+        System.out.print("2. ");
+        pup2.read();
+        System.out.print("3. ");
+        pup3.read();
+        System.out.print("4. ");
+        pup4.read();
+    }
+
+    public void write() {
+        System.out.print("1. ");
+        pup1.write();
+        System.out.print("2. ");
+        pup2.write();
+        System.out.print("3. ");
+        pup3.write();
+        System.out.print("4. ");
+        pup4.write();
+    }
+
+    public void relax() {
+        System.out.print("1. ");
+        pup1.relax();
+        System.out.print("2. ");
+        pup2.relax();
+        System.out.print("3. ");
+        pup3.relax();
+        System.out.print("4. ");
+        pup4.relax();
+    }
+
 }
 
 public class Task02 {
 
     public static void main(String[] args) {
 
-        Plane plane = new Plane(468.7, 832.3, 3000000.50, 827.0, 2016, 11000.0, 120);
-        Ship ship = new Ship(1240.8, 4027.2, 9000000.55, 47.8, 2012, 600, "Odesa");
-        Car car = new Car(8.0, 30.0, 38000.2, 180.5, 2018);
+        Pupil pupil1 = new ExcellentPupil();
+        Pupil pupil2 = new GoodPupil();
+        Pupil pupil3 = new GoodPupil();
+        Pupil pupil4 = new BadPupil();
 
-        System.out.println("\nPlane information:");
-        System.out.println("Coordinates: [" + plane.getX() + ", " + plane.getY() + "]");
-        System.out.println("Cost: " + plane.getCost());
-        System.out.println("Speed: " + plane.getSpeed());
-        System.out.println("Year: " + plane.getYear());
-        System.out.println("Height: " + plane.getHeight());
-        System.out.println("Passengers: " + plane.getPassengers());
+        System.out.println(pupil1.toString());
 
-        System.out.println("\nShip information:");
-        System.out.println("Coordinates: [" + ship.getX() + ", " + ship.getY() + "]");
-        System.out.println("Cost: " + ship.getCost());
-        System.out.println("Speed: " + ship.getSpeed());
-        System.out.println("Year: " + ship.getYear());
-        System.out.println("Passengers: " + ship.getPassengers());
-        System.out.println("Port of destination : " + ship.getPort());
+        ClassRoom classRoom1 = new ClassRoom(pupil1, pupil2, pupil3, pupil4);
+        System.out.println("\n-------------------------------------");
+        System.out.println("A class №1 (average grades)");
+        classRoom1.study();
+        classRoom1.read();
+        classRoom1.write();
+        classRoom1.relax();
 
-        System.out.println("\nCar information:");
-        System.out.println("Coordinates: [" + car.getX() + ", " + car.getY() + "]");
-        System.out.println("Cost: " + car.getCost());
-        System.out.println("Speed: " + car.getSpeed());
-        System.out.println("Year: " + car.getYear());
+        ClassRoom classRoom2 = new ClassRoom(pupil2, pupil2, pupil3);
+        System.out.println("\n-------------------------------------");
+        System.out.println("A class №2 (excellent grades)");
+        classRoom2.study();
+        classRoom2.read();
+        classRoom2.write();
+        classRoom2.relax();
 
+        ClassRoom classRoom3 = new ClassRoom(pupil4, pupil4);
+        System.out.println("\n-------------------------------------");
+        System.out.println("A class №3 (low grades)");
+        classRoom3.study();
+        classRoom3.read();
+        classRoom3.write();
+        classRoom3.relax();
     }
 
 }
