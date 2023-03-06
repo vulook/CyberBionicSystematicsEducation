@@ -121,6 +121,7 @@ public class Task05 {
         scales = s.nextInt();
 
         switch (scales) {
+
             case 1:
                 Celsius celsius = new Celsius(temperature);
                 System.out.println(celsius.convertToCelsius());

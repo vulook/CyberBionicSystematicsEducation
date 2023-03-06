@@ -47,6 +47,7 @@ class SimpleAudioPlayer implements Playable, Recordable {
             System.out.println("Player inactive");
             return;
         }
+
         System.out.println("=> playback");
     }
 
@@ -56,6 +57,7 @@ class SimpleAudioPlayer implements Playable, Recordable {
             System.out.println("Player inactive");
             return;
         }
+
         System.out.println("=> recording");
     }
 
@@ -65,6 +67,7 @@ class SimpleAudioPlayer implements Playable, Recordable {
             System.out.println("Player inactive");
             return;
         }
+
         System.out.println("Pause");
     }
 
@@ -74,6 +77,7 @@ class SimpleAudioPlayer implements Playable, Recordable {
             System.out.println("Player inactive");
             return;
         }
+
         System.out.println("Stop");
     }
 

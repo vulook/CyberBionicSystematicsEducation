@@ -155,6 +155,7 @@ public class Task02 {
             System.out.println("Folder " + folderName + " not found.");
             throw new NotDirectoryException(folderName);
         }
+
         return path;
     }
 
