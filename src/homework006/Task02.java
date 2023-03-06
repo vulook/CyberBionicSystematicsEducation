@@ -6,7 +6,7 @@ import java.util.Scanner;
  * FileName: Task02
  * Author:   Andriy Vulook
  * Date:     15.02.2023 12:05
- * Description: SumMin
+ * Description: Sum in interval or show OOD numbers
  */
 
 public class Task02 {
@@ -24,11 +24,11 @@ public class Task02 {
 
         if (A < B) {
             System.out.println("The sum of numbers in the interval: ");
-            System.out.println("METHOD1 (getSUM) = " + getSUM(A, B));
-            System.out.println("METHOD2 (getArithmeticPogression) = " + getArithmeticPogression(A, B));
+            System.out.println("METHOD1 (get SUM) = " + getSUM(A, B));
+            System.out.println("METHOD2 (get ArithmeticPogression) = " + getArithmeticPogression(A, B));
         } else if (A > B) {
-            System.out.println("Even numbers in the interval: ");
-            getEVEN(A, B);
+            System.out.println("ODD numbers in the interval: ");
+            getODD(A, B);
         } else if (A == B) {
             System.out.println("The SAME numbers are entered (==)! ");
         } else {
@@ -53,16 +53,19 @@ public class Task02 {
         return (a + b) * (b - a + 1) / 2;
     }
 
-    static void getEVEN(int A, int B) {
+    static void getODD(int A, int B) {
         int first = B + 1;
+        int count = 0;
 
         for (int i = first; i < A; i++) {
-            if (i % 2 == 0) {
+            if (i % 2 != 0) {
                 System.out.print(i + " ");
-            } else {
-                System.out.println("There are no even numbers! ");
+                count++;
             }
         }
+
+        if (count == 0)
+            System.out.println("There are no ODD numbers! ");
     }
 
 }
