@@ -22,21 +22,30 @@ public class MyTranslator {
 
     public static void main(String[] args) throws Exception {
 
-        String fromLang = "uk";
-        String toLang = "en";
+        String fromLang;
+        String toLang;
+        String text;
 
-        System.out.println("Еnter the words to translate: ");
+        System.out.println("myTranslator is starting ... ");
+        System.out.println("Languages: en, pl, ru, ua ... and other");
         Scanner s = new Scanner(System.in);
+        System.out.println("Translation from: ");
+        System.out.print("=> ");
+        fromLang = s.next();
+        System.out.println("Translation to: ");
+        System.out.print("=> ");
+        toLang = s.next();
+        System.out.println("Enter a word|phrase|sentence for translation: ");
         System.out.print("==> ");
-        String text = s.nextLine();
+        text = s.nextLine();
 
         translate(fromLang, toLang, text);
 
     }
 
-    public static void translate(String fromLang, String toLang, String text) throws Exception {
+    static void translate(String fromLang, String toLang, String text) throws Exception {
 
-        String jsonPayload = new StringBuilder()
+        String json = new StringBuilder()
                 .append("{")
                 .append("\"fromLang\":\"")
                 .append(fromLang)
@@ -59,7 +68,7 @@ public class MyTranslator {
         conn.setRequestProperty("Content-Type", "application/json");
 
         OutputStream os = conn.getOutputStream();
-        os.write(jsonPayload.getBytes());
+        os.write(json.getBytes());
         os.flush();
         os.close();
 
