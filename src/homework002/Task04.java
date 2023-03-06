@@ -13,7 +13,7 @@ public class Task04 {
 
     public static void main(String[] args) {
 
-        boolean true_grass = false;
+        boolean true_grass;
         String true_color = "green grass";
         String color1 = "red grass";
         String color2 = "orange grass";
@@ -39,43 +39,50 @@ public class Task04 {
         if (number == 1) {
             System.out.print(color1);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color1.equals(true_color));
+            true_grass = color1.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 2) {
             System.out.print(color2);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color2.equals(true_color));
+            true_grass = color2.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 3) {
             System.out.print(color3);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color3.equals(true_color));
+            true_grass = color3.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 4) {
             System.out.print(color4);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color4.equals(true_color));
+            true_grass = color4.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 5) {
             System.out.print(color5);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color5.equals(true_color));
+            true_grass = color5.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 6) {
             System.out.print(color6);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color6.equals(true_color));
+            true_grass = color6.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number == 7) {
             System.out.print(color7);
             System.out.print(". It's a color => ");
-            System.out.print(true_grass = color7.equals(true_color));
+            true_grass = color7.equals(true_color) ? true : false;
+            System.out.print(true_grass);
         }
 
         if (number < 1 || number > 7) {
