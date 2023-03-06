@@ -37,8 +37,8 @@ public class Task05 {
     static void checkDivisibilityRules(int[] array, int exponent) {
         System.out.println("--------------------------------------");
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " to the power " + exponent + " is: " + power(array[i], exponent));
+        for (int j : array) {
+            System.out.println(j + " to the power " + exponent + " is: " + power(j, exponent));
         }
     }
 

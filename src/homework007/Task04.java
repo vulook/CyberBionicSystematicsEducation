@@ -50,14 +50,14 @@ public class Task04 {
     }
 
     static void checkDivisibilityRules(int numb, int[] array) {
-        for (int i = 0; i < array.length; i++) {
+        for (int j : array) {
 
-            if (numb % array[i] == 0) {
-                System.out.print(numb + " is divisible by " + array[i]);
-                System.out.println(". Result: " + numb / array[i]);
+            if (numb % j == 0) {
+                System.out.print(numb + " is divisible by " + j);
+                System.out.println(". Result: " + numb / j);
             } else {
-                System.out.print(numb + " is not divisible by " + array[i]);
-                System.out.println(". Result: " + (double) numb / array[i]);
+                System.out.print(numb + " is not divisible by " + j);
+                System.out.println(". Result: " + (double) numb / j);
             }
         }
     }

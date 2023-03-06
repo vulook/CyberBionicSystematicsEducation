@@ -57,9 +57,9 @@ public class Task03 {
     }
 
     static String modificURL(String to, String from, double amount) {
-        url = url.replace("to=to", "to=" + String.valueOf(to));
-        url = url.replace("from=from", "from=" + String.valueOf(from));
-        url = url.replace("amount=amount", "amount=" + String.valueOf(amount));
+        url = url.replace("to=to", "to=" + to);
+        url = url.replace("from=from", "from=" + from);
+        url = url.replace("amount=amount", "amount=" + amount);
         return url;
     }
 

@@ -45,10 +45,10 @@ public class Task06 {
     static void checkDivisibilityRules(int[] array, int exp2, int exp3, int exp4) {
         System.out.println("--------------------------------------");
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i] + " to the power " + exp2 + " is: " + (int)Math.pow(array[i], exp2));
-            System.out.println(array[i] + " to the power " + exp3 + " is: " + (int)Math.pow(array[i], exp3));
-            System.out.println(array[i] + " to the power " + exp4 + " is: " + (int)Math.pow(array[i], exp4));
+        for (int j : array) {
+            System.out.println(j + " to the power " + exp2 + " is: " + (int) Math.pow(j, exp2));
+            System.out.println(j + " to the power " + exp3 + " is: " + (int) Math.pow(j, exp3));
+            System.out.println(j + " to the power " + exp4 + " is: " + (int) Math.pow(j, exp4));
         }
     }
 
