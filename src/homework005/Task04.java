@@ -6,7 +6,7 @@ import java.util.Scanner;
  * FileName: Task04
  * Author:   Andriy Vulook
  * Date:     13.02.2023 1:05
- * Description: Premium
+ * Description: Calculate Salary of an Employee with BONUS
  */
 
 public class Task04 {
@@ -30,28 +30,34 @@ public class Task04 {
         salary = Double.parseDouble(s.next());
 
         System.out.println("\nService years: " + serviceYears + ", Basic salary: " + salary);
-        getBonus(serviceYears);
-        System.out.println("Total salary: " + calculateTotalSalary(serviceYears, salary));
+        System.out.println(calculate(serviceYears, salary));
+
     }
 
-    public static void getBonus(int serviceYears) {
-        if (serviceYears < 5) System.out.println("Bonus amount = " + BONUS_1 * 100 + "%");
-        else if (serviceYears >= 5 && serviceYears < 10) System.out.println("Bonus amount = " + BONUS_2 * 100 + "%");
-        else if (serviceYears >= 10 && serviceYears < 15) System.out.println("Bonus amount = " + BONUS_3 * 100 + "%");
-        else if (serviceYears >= 15 && serviceYears < 20) System.out.println("Bonus amount = " + BONUS_4 * 100 + "%");
-        else if (serviceYears >= 20 && serviceYears < 25) System.out.println("Bonus amount = " + BONUS_5 * 100 + "%");
-        else if (serviceYears >= 25) System.out.println("Bonus amount = " + BONUS_6 * 100 + "%");
-        else System.out.println("Error!");
-    }
-    public static double calculateTotalSalary(int serviceYears, double salary) {
+    static double calculate(int serviceYears,  double salary) {
         double totalSalary = 0;
-        if (serviceYears < 5) totalSalary = salary + salary * BONUS_1;
-        else if (serviceYears >= 5 && serviceYears < 10) totalSalary = salary + salary * BONUS_2;
-        else if (serviceYears >= 10 && serviceYears < 15) totalSalary = salary + salary * BONUS_3;
-        else if (serviceYears >= 15 && serviceYears < 20) totalSalary = salary + salary * BONUS_4;
-        else if (serviceYears >= 20 && serviceYears < 25) totalSalary = salary + salary * BONUS_5;
-        else if (serviceYears >= 25) totalSalary = salary + salary * BONUS_6;
-        else System.out.println("Error!");
+        if (serviceYears < 5) {
+            System.out.println("Bonus amount = " + BONUS_1 * 100 + "%");
+            totalSalary = salary + salary * BONUS_1;
+        } else if (serviceYears >= 5 && serviceYears < 10) {
+            System.out.println("Bonus amount = " + BONUS_2 * 100 + "%");
+            totalSalary = salary + salary * BONUS_2;
+        } else if (serviceYears >= 10 && serviceYears < 15) {
+            System.out.println("Bonus amount = " + BONUS_3 * 100 + "%");
+            totalSalary = salary + salary * BONUS_3;
+        } else if (serviceYears >= 15 && serviceYears < 20) {
+            System.out.println("Bonus amount = " + BONUS_4 * 100 + "%");
+            totalSalary = salary + salary * BONUS_4;
+        } else if (serviceYears >= 20 && serviceYears < 25) {
+            System.out.println("Bonus amount = " + BONUS_5 * 100 + "%");
+            totalSalary = salary + salary * BONUS_5;
+        } else if (serviceYears >= 25) {
+            System.out.println("Bonus amount = " + BONUS_6 * 100 + "%");
+            totalSalary = salary + salary * BONUS_6;
+        } else {
+            System.out.println("Error!");
+        }
+        System.out.print("Total salary: ");
         return totalSalary;
     }
 
