@@ -175,8 +175,6 @@ public class Task02 {
         Pupil pupil3 = new GoodPupil();
         Pupil pupil4 = new BadPupil();
 
-        System.out.println(pupil1.toString());
-
         ClassRoom classRoom1 = new ClassRoom(pupil1, pupil2, pupil3, pupil4);
         System.out.println("\n-------------------------------------");
         System.out.println("A class №1 (average grades)");
@@ -185,7 +183,7 @@ public class Task02 {
         classRoom1.write();
         classRoom1.relax();
 
-        ClassRoom classRoom2 = new ClassRoom(pupil2, pupil2, pupil3);
+        ClassRoom classRoom2 = new ClassRoom(pupil1, pupil1, pupil3);
         System.out.println("\n-------------------------------------");
         System.out.println("A class №2 (excellent grades)");
         classRoom2.study();
