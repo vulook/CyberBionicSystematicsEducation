@@ -19,7 +19,10 @@ class Car3 {
     private int weight;
     private String color;
 
+    public Car3() {}
+
     public Car3(int year) {
+        this();
         this.year = year;
     }
 
@@ -32,7 +35,6 @@ class Car3 {
         this(year, speed);
         this.weight = weight;
     }
-
 
     public Car3(int year, double speed, int weight, String color) {
         this(year, speed, weight);
@@ -50,6 +52,13 @@ public class Task04 {
 
         System.out.println("ListCAR3:");
 
+        Car3 car5 = new Car3();
+        car5.setYear(2019);
+        car5.setSpeed(280.4);
+        car5.setWeight(2100);
+        car5.setColor("ultramarine");
+        car5.print();
+
         Car3 car1 = new Car3(1998);
         car1.setSpeed(140.8);
         car1.setWeight(2644);
@@ -57,8 +66,8 @@ public class Task04 {
         car1.print();
 
         Car3 car2 = new Car3(2000, 160.0);
-        car1.setWeight(1800);
-        car1.setColor("tangerine");
+        car2.setWeight(1800);
+        car2.setColor("tangerine");
         car2.print();
 
         Car3 car3 = new Car3(2012, 180.0, 2222);
