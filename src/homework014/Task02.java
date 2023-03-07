@@ -34,7 +34,7 @@ class Car1 {
 
     public Car1(int year) {
         this.year = year;
-        color = "";
+        this.color = "";
     }
 
     public Car1(int year, String color) {
@@ -52,7 +52,6 @@ class Car1 {
     }
 
 }
-
 public class Task02 {
 
     public static void main(String[] args) {
