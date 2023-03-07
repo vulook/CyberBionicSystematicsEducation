@@ -32,7 +32,7 @@ public class Task07 {
 
     static void calculate(int numb1, int numb2, int numb3) {
         double result;
-        result = (numb1 + numb2 + numb3) / 3;
+        result = (double) (numb1 + numb2 + numb3) / 3;
         System.out.println("The average of three numbers is: " + result);
     }
 
