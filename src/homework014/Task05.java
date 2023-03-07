@@ -24,6 +24,7 @@ public class Task05 {
     public static void main(String[] args) {
 
         double radius = Math.random();
+
         MyArea.areaOfCircle(radius);
 
     }
