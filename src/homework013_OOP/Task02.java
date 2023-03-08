@@ -38,10 +38,6 @@ class Rectangle {
         return "Side1: " + getSide1() + ", Side2: " + getSide2();
     }
 
-    public void print() {
-        System.out.println(this);
-    }
-
 }
 
 public class Task02 {
