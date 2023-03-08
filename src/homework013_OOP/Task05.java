@@ -65,7 +65,7 @@ class Address {
 
     @Override
     public String toString() {
-        return "Index: " + getIndex()
+        return "Address: Index: " + getIndex()
                 + ", Country: " + getCountry()
                 + ", City: " + getCity()
                 + ", Street: " + getStreet()
@@ -91,13 +91,7 @@ public class Task05 {
         address.setHouse("5");
         address.setApartment("42");
 
-        System.out.println("Index: " + address.getIndex());
-        System.out.println("Country: " + address.getCountry());
-        System.out.println("City: " + address.getCity());
-        System.out.println("Street: " + address.getStreet());
-        System.out.println("House: " + address.getHouse());
-        System.out.println("Apartment: " + address.getApartment());
-
+        address.print();
     }
 
 }
