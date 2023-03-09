@@ -13,22 +13,22 @@ enum Animals {
     CAT(8) {
         @Override
         public String toString() {
-            return "Cat Teddy is " + getAnimals(CAT.age) + " years old";
+            return name() + " Teddy is " + CAT.age + " years old";
         }
     }, DOG(12) {
         @Override
         public String toString() {
-            return "Dog Archie is " + getAnimals(DOG.age) + " years old";
+            return name() + " Archie is " + DOG.age + " years old";
         }
     }, HAMSTER(2) {
         @Override
         public String toString() {
-            return "Hamster Tilly is " + getAnimals(HAMSTER.age) + " years old";
+            return name() + " Tilly is " + HAMSTER.age + " years old";
         }
     }, PARROT(3) {
         @Override
         public String toString() {
-            return "Parrot Bella is " + getAnimals(PARROT.age) + " years old";
+            return name() + " Bella is " + PARROT.age + " years old";
         }
     };
 
@@ -36,10 +36,6 @@ enum Animals {
 
     Animals(int age) {
         this.age = age;
-    }
-
-    public int getAnimals(int age) {
-        return age;
     }
 
 }
