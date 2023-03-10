@@ -79,7 +79,7 @@ public class Task02 {
         int maxExperience = getMaxExperience(workers);
         System.out.println("Maximum experience in the system: " + maxExperience + ". You can't put more!");
         inputExperience = checkValidInputExp(s, maxExperience);
-        getExpWorker(workers, inputExperience);
+        printGetExpWorker(workers, inputExperience);
 
     }
 
@@ -159,7 +159,7 @@ public class Task02 {
         return correctExperience;
     }
 
-    static void getExpWorker(List<Worker> workers, int inputExperience) {
+    static void printGetExpWorker(List<Worker> workers, int inputExperience) {
         int currentExperience;
         for (Worker worker : workers) {
             currentExperience = worker.getExperience();
