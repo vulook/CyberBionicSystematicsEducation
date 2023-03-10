@@ -35,15 +35,15 @@ public class Task03 {
         List<Price> prices = new ArrayList<>();
         Scanner s = new Scanner(System.in);
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 4; i++) {
             System.out.println("Enter product details No.: " + (i+1));
             System.out.print("Product name: ");
-            String productName = s.nextLine();
+            inputProduct = s.nextLine();
             System.out.print("Store name: ");
-            String storeName = s.nextLine();
+            inputStore = s.nextLine();
             System.out.print("Price in UAH: ");
-            double price = s.nextDouble();
-            prices.add(new Price(productName, storeName, price));
+            inputPrice = s.nextDouble();
+            prices.add(new Price(inputProduct, inputStore, inputPrice));
         }
 
     }
