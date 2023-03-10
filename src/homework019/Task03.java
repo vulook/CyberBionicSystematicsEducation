@@ -42,7 +42,7 @@ public class Task03 {
         List<Price> prices = new ArrayList<>();
         Scanner s = new Scanner(System.in);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Enter product details No.: " + (i + 1));
             System.out.print("Product name: ");
             inputProduct = s.nextLine();
