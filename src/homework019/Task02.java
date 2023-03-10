@@ -61,7 +61,7 @@ public class Task02 {
         List<Worker> workers = new ArrayList<>();
         Scanner s = new Scanner(System.in);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Enter the details for Worker no." + (i + 1) + ":");
             System.out.println("Surname and initials: ");
             name = s.nextLine();
