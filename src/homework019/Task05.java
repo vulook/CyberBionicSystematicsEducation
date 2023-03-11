@@ -25,42 +25,38 @@ import java.util.Scanner;
 @ToString
 class Calculator {
 
-    private double operand1;
-    private double operand2;
+    private double op1;
+    private double op2;
 
-}
-
-class Calculation {
-
-    public double add(double op1, double op2) {
+    public double add() {
         return op1 + op2;
     }
 
-    public double difference(double op1, double op2) {
+    public double difference() {
         return op1 - op2;
     }
 
-    public double multiply(double op1, double op2) {
+    public double multiply() {
         return op1 * op2;
     }
 
-    public double divide(double op1, double op2) {
+    public double divide() {
         return op1 / op2;
     }
 
-    public double remainder(double op1, double op2) {
+    public double remainder() {
         return op1 % op2;
     }
 
-    public int bitwiseXOR(double op1, double op2) {
+    public int bitwiseXOR() {
         return (int) op1 ^ (int) op2;
     }
 
-    public int bitwiseOR(double op1, double op2) {
+    public int bitwiseOR() {
         return (int) op1 | (int) op2;
     }
 
-    public int bitwiseAND(double op1, double op2) {
+    public int bitwiseAND() {
         return (int) op1 & (int) op2;
     }
 }
@@ -101,36 +97,35 @@ public class Task05 {
         secondNumber = checkValidNum(s);
 
         Calculator calculator = new Calculator();
-        calculator.setOperand1(firstNumber);
-        calculator.setOperand2(secondNumber);
+        calculator.setOp1(firstNumber);
+        calculator.setOp2(secondNumber);
 
-        Calculation calculation = new Calculation();
 
         switch (operation) {
             case '+':
-                result = calculation.add(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.add();
                 break;
             case '-':
-                result = calculation.difference(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.difference();
                 break;
             case '*':
-                result = calculation.multiply(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.multiply();
                 break;
             case '/':
-                if (calculator.getOperand2() == 0) throw new DivideByZeroException();
-                result = calculation.divide(calculator.getOperand1(), calculator.getOperand2());
+                if (calculator.getOp2() == 0) throw new DivideByZeroException();
+                result = calculator.divide();
                 break;
             case '%':
-                result = calculation.remainder(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.remainder();
                 break;
             case '^':
-                result = calculation.bitwiseXOR(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.bitwiseXOR();
                 break;
             case '|':
-                result = calculation.bitwiseOR(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.bitwiseOR();
                 break;
             case '&':
-                result = calculation.bitwiseAND(calculator.getOperand1(), calculator.getOperand2());
+                result = calculator.bitwiseAND();
                 break;
             default:
                 result = 0;
