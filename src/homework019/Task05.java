@@ -3,7 +3,6 @@ package homework019;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -16,13 +15,11 @@ import java.util.Scanner;
  * <p>
  * NaN in Java
  * https://www.baeldung.com/java-not-a-number
- *
  */
 
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
 class Calculator {
 
     private double op1;
@@ -61,15 +58,15 @@ class Calculator {
     }
 }
 
-class DivideByZeroException extends Exception {
-    public DivideByZeroException() {
+class DivByZeroException extends Exception {
+    public DivByZeroException() {
         super("Cannot divide by zero!");
         System.out.println("Dividing by zero.");
         System.out.println("Program aborted.");
         System.exit(0);
     }
 
-    public DivideByZeroException(String message) {
+    public DivByZeroException(String message) {
         super(message);
     }
 }
@@ -77,7 +74,7 @@ class DivideByZeroException extends Exception {
 
 public class Task05 {
 
-    public static void main(String[] args) throws DivideByZeroException {
+    public static void main(String[] args) throws DivByZeroException {
 
         double firstNumber;
         double secondNumber;
@@ -112,7 +109,7 @@ public class Task05 {
                 result = calculator.multiply();
                 break;
             case '/':
-                if (calculator.getOp2() == 0) throw new DivideByZeroException();
+                if (calculator.getOp2() == 0) throw new DivByZeroException();
                 result = calculator.divide();
                 break;
             case '%':
@@ -136,7 +133,7 @@ public class Task05 {
 
     }
 
-    static double checkValidNum(Scanner s) {
+    private static double checkValidNum(Scanner s) {
         double validNumber;
         String number = s.nextLine();
 
@@ -156,7 +153,7 @@ public class Task05 {
         return validNumber;
     }
 
-    static char checkValidOperation(Scanner s) {
+    private static char checkValidOperation(Scanner s) {
         char validChar;
         String inputString = s.nextLine();
 
@@ -183,7 +180,7 @@ public class Task05 {
         return validChar;
     }
 
-    static String checkInt(double numb) {
+    private static String checkInt(double numb) {
         return (numb % 1) == 0 ? String.valueOf((int) numb) : String.valueOf(numb);
     }
 
