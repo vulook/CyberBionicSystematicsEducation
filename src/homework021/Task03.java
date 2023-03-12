@@ -84,8 +84,8 @@ public class Task03 {
         System.out.println("Get the index of the key 100: " + dictionary.getIndex(100));
         System.out.println("Get the index of the key 500: " + dictionary.getIndex(500));
 
-        System.out.println("Value at index 0 after removal: " + dictionary.get(0));
-        System.out.println("Value at index 4 after removal... ");
+        System.out.println("Value at index 0 removing element: " + dictionary.get(0));
+        System.out.println("Value at index 4 removing element... ");
         dictionary.get(4); //IndexOutOfBoundsException: Invalid index: 4
 
     }
