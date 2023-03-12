@@ -12,22 +12,22 @@ import java.util.ArrayList;
 
 class MyList<T> {
 
-    private final ArrayList<T> element;
+    private final ArrayList<T> newList;
 
     public MyList() {
-        element = new ArrayList<T>();
+        newList = new ArrayList<T>();
     }
 
     public void add(T item) {
-        element.add(item);
+        newList.add(item);
     }
 
     public T get(int index) {
-        return element.get(index);
+        return newList.get(index);
     }
 
     public int size() {
-        return element.size();
+        return newList.size();
     }
 }
 
