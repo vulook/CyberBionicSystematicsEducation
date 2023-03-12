@@ -7,7 +7,7 @@ import java.util.Scanner;
  * FileName: Task06
  * Author:   Andriy Vulook
  * Date:     12.03.2023 18:56
- * Description: The Calculator class is static with static methods that accept two variables
+ * Description: The Calculator class with static methods that accept two variables
  */
 
 class CalculatorS {
