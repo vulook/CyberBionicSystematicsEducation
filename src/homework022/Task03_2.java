@@ -45,6 +45,8 @@ public class Task03_2 {
         Car2 c10 = new Car2(190, 1000, "Opel", "Gray");
 
         Car2[] cars = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10};
+        System.out.println("Before sorting:");
+        printCarArray(cars);
 
         Arrays.sort(cars, new Comparator<Car2>() {
             public int compare(Car2 car1, Car2 car2) {
@@ -62,6 +64,7 @@ public class Task03_2 {
             }
         });
 
+        System.out.println("After sorting:");
         printCarArray(cars);
 
     }

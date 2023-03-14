@@ -59,9 +59,14 @@ public class Task03_1 {
         Car1 c8 = new Car1(195, 11000, "Ford", "Gray");
         Car1 c9 = new Car1(220, 18000, "Honda", "Orange");
         Car1 c10 = new Car1(185, 6000, "Lexus", "Purple");
+
         Car1[] cars = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10};
+        System.out.println("Before sorting:");
+        printCarArray(cars);
 
         Arrays.sort(cars);
+
+        System.out.println("After sorting:");
         printCarArray(cars);
 
     }
